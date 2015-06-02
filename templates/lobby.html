@@ -1,0 +1,8 @@
+		<div ng-controller="lobby">
+			<div ng-repeat="group in groups"><span>{{group.id}}</span>:<span>{{group.name}}</span></div>
+			<input ng-model="groupName" placeholder="Enter Group Name" type="text"/>
+			<button ng-click="addGroup()">ADD GROUP</button>
+			<button ng-click="joinGroup()">JOIN GROUP</button>
+			<button ng-click="broadcaster()">BROADCAST</button>
+		</div>
+		

@@ -1,0 +1,16 @@
+<div id="searchContainer" ng-controller="search">
+	
+	<input type="search" placeholder="Search for your favorite artist!"/>
+	<div>
+		<ul>
+			<li ng-repeat="result in results" ng-click="addSong($index)">{{result.name}} </li>
+		</ul>
+	</div>
+	
+	<div class="playList">
+		<ul>
+			<li ng-click="removeSong($index)" ng-repeat="song in playlist">{{song.artist}} - {{song.name}}</li>
+		</ul>
+	</div>
+	
+</div>

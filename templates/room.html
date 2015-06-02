@@ -1,0 +1,5 @@
+<div ng-controller="room">
+	<h1> ROOM {{group.name}}</h1>
+	<ng-include src="'templates/musicSearch.html'"></ng-include>
+	<div ng-repeat="user in group.people">{{user}}</div>
+</div>
