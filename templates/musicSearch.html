@@ -1,9 +1,14 @@
 <div id="searchContainer" ng-controller="search">
 	
-	<input type="search" placeholder="Search for your favorite artist!"/>
+	<input type="search" ng-model="searchParams" placeholder="Search for your favorite artist!" ng-click="search()"/>
 	<div>
 		<ul>
-			<li ng-repeat="result in results" ng-click="addSong($index)">{{result.name}} </li>
+			<img ng-src="{{}}">
+			<li ng-repeat="result in results" ng-click="addSong($index)">
+				<img ng-src="{{result.snippet.thumbnails.default.url}}">
+				<b>{{result.snippet.title}} </b>
+				<span>{{result.snippet.description}}</span>
+			</li>
 		</ul>
 	</div>
 	

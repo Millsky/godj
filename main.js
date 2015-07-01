@@ -5,6 +5,6 @@ socket.on('connected',function(data){
 });
 
 socket.on('groupsList',function(data){
-	console.log(data);
+	//console.log(data);
 });
 

@@ -20,10 +20,11 @@ Room.prototype.removePerson = function(person) {
   for(var i = 0; i < this.people.length; i++){
     if(this.people[i].id === person.id){
       personIndex = i;
+      /* Remove Person */
+      this.people.splice(i,1);
       break;
     }
   }
-  this.people.remove(personIndex);
 };
 
 Room.prototype.getPerson = function(personID) {
